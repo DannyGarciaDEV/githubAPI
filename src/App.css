@@ -1,0 +1,39 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.input-field {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.github-user-container {
+  text-align: center;
+}
+
+.github-user-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.github-user-container p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.github-user-container img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+}
+
