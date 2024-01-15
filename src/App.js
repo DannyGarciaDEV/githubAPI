@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
+
 import './App.css';
 
-function GitHubUser({ name, location, avatar, blog, followers, following, twitter, company, user, updated}) {
+function GitHubUser({ name, location, avatar, blog, followers, following, twitter, company, user }) {
   return (
-    <div className="github-user-container"> 
-      <h1> Name:{name}</h1>
-      <p> Location: {location}</p>
-      <img src={avatar} height={150} alt={name} />
-      <p> Blog: {blog} </p>
-      <p> Followers:{followers} Following:{following} </p>
-    <p> Twitter: {twitter} </p>
-    <p> Company:{company} </p>
-    <p>
-  <a href={`https://github.com/${user}?tab=repositories`} target="_blank">
-    https://github.com/{user}?tab=repositories
-  </a>
-</p>
-   
-    <p> Last Update:{updated} </p>
+    <div className="github-user-container">
+      <h1 className="user-info">Name: {name}</h1>
+      <p className="user-info">Location: {location}</p>
+      <img src={avatar} className="user-avatar" alt={name} />
+      <p className="user-info">Blog: <a href="{blog}" > Click here</a></p>
+      <p className="user-info">Followers: {followers} Following: {following}</p>
+      <p className="user-info">Twitter: {twitter}</p>
+      <p className="user-info">Company: {company}</p>
+      <p className="user-info">
+        <a href={`https://github.com/${user}?tab=repositories`} target="_blank" className="repo-link">
+          https://github.com/{user}?tab=repositories
+        </a>
+      </p>
+    
     </div>
   );
 }
@@ -45,13 +45,21 @@ function App() {
   };
 
   return (
-    <div className="container"> 
-      <input
-        type="text"
-        value={gitName}
-        onChange={handleInputChange}
-        className="input-field"
-      />
+    <div className="app-container">
+    <div className="header-container">
+      <h1>Search for Github user</h1>
+      <img className="githubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
+    </div>
+  <div className="header-container">
+  <img className="searchImg" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png" alt="Search icon" />
+<input
+  type="text"
+  value={gitName}
+  onChange={handleInputChange}
+  className="input-field"
+  placeholder="Enter GitHub username"
+/>
+      </div>
       {data ? (
         <GitHubUser
           name={data.name}
@@ -60,15 +68,14 @@ function App() {
           blog={data.blog}
           followers={data.followers}
           following={data.following}
-          twitter= {data.twitter_username}
+          twitter={data.twitter_username}
           company={data.company}
-        user={data.login}
-          updated={data.updated_at}
+          user={data.login}
+          
         />
       ) : (
         <div>
-        <h1 className="no-data">No data available</h1>
-     
+          <h1 className="no-data">No data available</h1>
         </div>
       )}
     </div>

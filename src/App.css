@@ -1,39 +1,97 @@
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+/* App.css */
+
 
 .input-field {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ced4da; /* Gray border */
+  border-radius: 5px;
   width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .github-user-container {
+  border: 2px solid #007bff; /* GitHub blue border */
+  padding: 30px;
+  margin-top: 30px;
+  max-width: 600px;
   text-align: center;
+  border-radius: 10px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Light box shadow */
 }
 
-.github-user-container h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.user-info {
+  margin: 15px 0;
+  color: #495057; /* Dark gray text color */
 }
 
-.github-user-container p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.user-info a {
+
+  text-decoration: none; /* Remove default underline */
 }
 
-.github-user-container img {
+.user-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.user-avatar {
+  width: 100%;
+  max-width: 200px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
+}
+
+.repo-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff; /* White text color */
+  background-color: #28a745; /* Green background */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.repo-link:hover {
+  background-color: #218838; /* Darker green on hover */
 }
 
 .no-data {
-  text-align: center;
-  font-size: 1.5rem;
-  color: red;
+  color: #dc3545; /* Red text color */
+  font-size: 18px;
+  margin-top: 20px;
 }
 
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f9fa; /* Light gray background */
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-right: 10px; /* Add margin to separate h1 and img */
+}
+
+img.githubLogo {
+  max-width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.searchImg {
+  width: 24px; /* Adjust the size of the search icon as needed */
+  height: 24px;
+ margin: 1px 6px 20px 2px;
+}
